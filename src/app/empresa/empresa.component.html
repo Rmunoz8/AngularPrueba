@@ -1,0 +1,9 @@
+<h1>{{titulo}}</h1>
+    <div *ngIf = "trabajador_externo == true">
+        <button (click) = "cambiarExterno(false)">Mostrar Empleado</button>
+        <p>Trabajador: {{jefe.nombre}} - {{jefe.edad}} - {{jefe.cargo}}</p>
+    </div>
+    <div *ngIf = "trabajador_externo == false">
+        <button (click) = "cambiarExterno(true)">Mostrar Trabajador</button>
+        <p>Empleado: {{trabajadores[0].nombre}} - {{trabajadores[0].edad}} - {{trabajadores[0].cargo}}</p>
+    </div>
