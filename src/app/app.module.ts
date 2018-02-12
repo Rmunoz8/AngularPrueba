@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ComponentsModule } from './lib/components/components.module';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ArticuloComponent } from './servicios/articulo/articulo.component';
 
 
 @NgModule({
@@ -21,13 +22,15 @@ import { ContactoComponent } from './contacto/contacto.component';
     NavbarComponent,
     EmpresaComponent,
     InicioComponent,
-    ContactoComponent
+    ContactoComponent,
+    ArticuloComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

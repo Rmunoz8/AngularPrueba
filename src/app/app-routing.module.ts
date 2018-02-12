@@ -9,10 +9,10 @@ const routes: Routes = [
   {path:'', component:InicioComponent},
   {path:'empresa', component:EmpresaComponent},
   {path:'empleado', component:EmpleadoComponent},
-  {path:'**',component:InicioComponent},
   {path:'inicio', component:InicioComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'empledao/:id', component:EmpleadoComponent},
+  {path:'**',component:InicioComponent}
 ];
 
 @NgModule({
