@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticuloComponent } from '../articulo/articulo.component';
 
 @Component({
   selector: 'pe-contacto',

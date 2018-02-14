@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ArticulosService} from 'app/articulos';
+import {ArticulosService} from '../servicios/articulos.service';
 
 @Component({
   selector: 'pe-articulo',
@@ -8,9 +8,29 @@ import {ArticulosService} from 'app/articulos';
 })
 export class ArticuloComponent implements OnInit {
 
-  constructor() { }
+
+  public articulos: Array<any>;
+  constructor(public articuloService:ArticulosService) {}
+
+   getArticulos(): void{
+     this.articuloService.getArticulos().subscribe(
+       result=>{
+         // if(result.code !== 200){
+         //   this.articulos = result;
+         // } else {
+         //   this.articulos = result;
+         // }
+         this.articulos = result;
+         console.log(this.articulos);
+       },
+       error => {
+         console.log(<any>error);
+       }
+     );
+   }
 
   ngOnInit() {
+    this.getArticulos();
   }
 
 }

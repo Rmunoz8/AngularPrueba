@@ -12,8 +12,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { ArticuloComponent } from './servicios/articulo/articulo.component';
+import { ArticuloComponent } from './articulo/articulo.component';
 
+import { ArticulosService } from './servicios/articulos.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { ArticuloComponent } from './servicios/articulo/articulo.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ArticulosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
